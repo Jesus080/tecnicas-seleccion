@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Resultados del Experimento</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Dashboard - Resultados del Experimento</h1>
+            <p class="subtitle">Métricas y Análisis del Modelo de Detección de Malware</p>
+        </header>
+
+        <nav>
+            <a href="/home/">Inicio</a>
+            <a href="/dashboard/">Dashboard</a>
+            <a href="/api/">API</a>
+        </nav>
+
+        <main>
+            <section class="results-section">
+                <h2>Resultados del Experimento</h2>
+                
+                <!-- Decision Forest -->
+                <div class="result-table">
+                    <h3>Decision Forest</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>F1 Score (Entrenamiento)</td>
+                                <td>0.930275</td>
+                            </tr>
+                            <tr>
+                                <td>F1 Score (Validación)</td>
+                                <td>0.930006</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Random Forest Classification -->
+                <div class="result-table">
+                    <h3>Random Forest (Clasificación)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for metric in metrics %}
+                            <tr>
+                                <td>{{ metric.metric_name }}</td>
+                                <td>{{ metric.metric_value|floatformat:4 }}</td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td>F1_Train_SinEscalar</td>
+                                <td>0.9810</td>
+                            </tr>
+                            <tr>
+                                <td>F1_Train_Escalar</td>
+                                <td>0.9809</td>
+                            </tr>
+                            <tr>
+                                <td>F1_Val_SinEscalar</td>
+                                <td>0.9301</td>
+                            </tr>
+                            <tr>
+                                <td>F1_Val_Escalar</td>
+                                <td>0.9299</td>
+                            </tr>
+                            <tr>
+                                <td>Recall_Val_SinEscalar</td>
+                                <td>0.9315</td>
+                            </tr>
+                            <tr>
+                                <td>Recall_Val_Escalar</td>
+                                <td>0.9313</td>
+                            </tr>
+                            <tr>
+                                <td>Precision_Val_SinEscalar</td>
+                                <td>0.9302</td>
+                            </tr>
+                            <tr>
+                                <td>Precision_Val_Escalar</td>
+                                <td>0.9300</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Comparación Escalado vs Sin Escalar -->
+                <div class="comparison-table">
+                    <h3>Comparación Escalado vs Sin Escalar</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Sin Escalar</th>
+                                <th>Con Escalado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>F1_Score</td>
+                                <td>0.9301</td>
+                                <td>0.9299</td>
+                            </tr>
+                            <tr>
+                                <td>Recall_Score</td>
+                                <td>0.9315</td>
+                                <td>0.9313</td>
+                            </tr>
+                            <tr>
+                                <td>Precision_Score</td>
+                                <td>0.9302</td>
+                                <td>0.9300</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Random Forest Regression -->
+                <div class="result-table">
+                    <h3>Random Forest (Regresión)</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MSE_Train_SinEscalar</td>
+                                <td>0.0199</td>
+                            </tr>
+                            <tr>
+                                <td>R2_Train_SinEscalar</td>
+                                <td>0.9042</td>
+                            </tr>
+                            <tr>
+                                <td>MSE_Val_SinEscalar</td>
+                                <td>0.0555</td>
+                            </tr>
+                            <tr>
+                                <td>R2_Val_SinEscalar</td>
+                                <td>0.7332</td>
+                            </tr>
+                            <tr>
+                                <td>MSE_Train_Escalar</td>
+                                <td>0.0199</td>
+                            </tr>
+                            <tr>
+                                <td>R2_Train_Escalar</td>
+                                <td>0.9043</td>
+                            </tr>
+                            <tr>
+                                <td>MSE_Val_Escalar</td>
+                                <td>0.0554</td>
+                            </tr>
+                            <tr>
+                                <td>R2_Val_Escalar</td>
+                                <td>0.7335</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Comparación Escalado vs Sin Escalar (Regresión) -->
+                <div class="comparison-table">
+                    <h3>Comparación Escalado vs Sin Escalar</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Métrica</th>
+                                <th>Sin Escalar</th>
+                                <th>Con Escalado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>MSE</td>
+                                <td>0.055400</td>
+                                <td>0.055442</td>
+                            </tr>
+                            <tr>
+                                <td>R²</td>
+                                <td>0.733231</td>
+                                <td>0.733459</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Gráfico de Clasificación -->
+                <div class="chart-container">
+                    <h3>Gráfico - Clasificación</h3>
+                    <canvas id="classificationChart"></canvas>
+                </div>
+
+                <!-- Gráfico de Regresión -->
+                <div class="chart-container">
+                    <h3>Random Forest Regressor - Sin escalar</h3>
+                    <canvas id="regressionChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Importancia de Características -->
+            <section class="features-section">
+                <h2>🎯 Top 10 Características Más Importantes</h2>
+                <div class="features-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Característica</th>
+                                <th>Importancia</th>
+                                <th>Barra</th>
+                            </tr>
+                        </thead>
+                        <tbody id="featuresTableBody">
+                            {% for feature in top_features %}
+                            <tr>
+                                <td>{{ feature.rank }}</td>
+                                <td>{{ feature.feature_name }}</td>
+                                <td>{{ feature.importance_score|floatformat:6 }}</td>
+                                <td>
+                                    <div class="importance-bar">
+                                        <div class="importance-fill" style="width: {% widthratio feature.importance_score 1 100 %}%"></div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="4">No hay datos de características. Entrena el modelo primero.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Análisis Recientes -->
+            <section class="analyses-section">
+                <h2>📋 Análisis Recientes</h2>
+                <div class="analyses-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Tipo de Malware</th>
+                                <th>Confianza</th>
+                                <th>F1-Score</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for analysis in recent_analyses %}
+                            <tr>
+                                <td>{{ analysis.created_at|date:"Y-m-d H:i" }}</td>
+                                <td>
+                                    <span class="badge badge-{{ analysis.malware_type }}">
+                                        {{ analysis.get_malware_type_display }}
+                                    </span>
+                                </td>
+                                <td>{{ analysis.confidence|floatformat:4 }}</td>
+                                <td>{{ analysis.f1_score|default:"N/A" }}</td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="4">No hay análisis recientes</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Predicción en Tiempo Real -->
+            <section class="prediction-section">
+                <h2>🔮 Hacer Predicción</h2>
+                <div class="prediction-form">
+                    <form id="predictionForm">
+                        <p>Ingresa las características de la aplicación para obtener una predicción:</p>
+                        <div class="form-group">
+                            <label>Método de entrada:</label>
+                            <select id="inputMethod">
+                                <option value="json">JSON</option>
+                                <option value="form">Formulario</option>
+                            </select>
+                        </div>
+                        
+                        <div id="jsonInput">
+                            <textarea id="featuresJson" rows="10" placeholder='{"feature1": 0.5, "feature2": 1.2, ...}'>
+{
+  "Flow_Duration": 1000000,
+  "Total_Fwd_Packets": 10,
+  "Total_Backward_Packets": 8,
+  "Flow_Bytes_s": 15000,
+  "Flow_Packets_s": 18
+}
+                            </textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Predecir</button>
+                    </form>
+                    
+                    <div id="predictionResult" class="result-box" style="display: none;">
+                        <h3>Resultado:</h3>
+                        <div id="resultContent"></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Sistema de Detección de Malware Android - Dashboard de Resultados</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+    <script>
+        // Gráfico de clasificación
+        const ctx = document.getElementById('classificationChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'scatter',
+            data: {
+                datasets: [{
+                    label: 'Sin escalar',
+                    data: generateScatterData(100),
+                    backgroundColor: 'rgba(54, 162, 235, 0.6)'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Predicciones'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Valores Reales'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Gráfico de regresión
+        const ctxRegression = document.getElementById('regressionChart').getContext('2d');
+        const regressionChart = new Chart(ctxRegression, {
+            type: 'scatter',
+            data: {
+                datasets: [
+                    {
+                        label: 'Sin escalar',
+                        data: generateRegressionData(150),
+                        backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'Línea ideal',
+                        data: [{x: 0, y: 0}, {x: 2, y: 2}],
+                        type: 'line',
+                        borderColor: 'rgba(255, 99, 132, 0.8)',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        pointRadius: 0,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                scales: {
+                    x: {
+                        min: 0,
+                        max: 2,
+                        title: {
+                            display: true,
+                            text: 'Predicciones'
+                        }
+                    },
+                    y: {
+                        min: 0,
+                        max: 2,
+                        title: {
+                            display: true,
+                            text: 'Valores Reales'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'top'
+                    }
+                }
+            }
+        });
+
+        function generateScatterData(count) {
+            const data = [];
+            for (let i = 0; i < count; i++) {
+                const x = Math.random() * 2;
+                const y = x + (Math.random() - 0.5) * 0.3;
+                data.push({x: x, y: y});
+            }
+            return data;
+        }
+
+        function generateRegressionData(count) {
+            const data = [];
+            // Generar tres grupos verticales como en la imagen
+            const groups = [0.05, 1.0, 2.0];
+            
+            groups.forEach(xPos => {
+                const pointsPerGroup = Math.floor(count / 3);
+                for (let i = 0; i < pointsPerGroup; i++) {
+                    const x = xPos + (Math.random() - 0.5) * 0.05;
+                    const y = Math.random() * 2;
+                    data.push({x: x, y: y});
+                }
+            });
+            
+            return data;
+        }
+    </script>
+</body>
+</html>

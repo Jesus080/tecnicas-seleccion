@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección de Malware Android - API</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛡️ Sistema de Detección de Malware Android</h1>
+            <p class="subtitle">Análisis mediante Random Forest y Selección de Características</p>
+        </header>
+
+        <nav>
+            <a href="/home/">Inicio</a>
+            <a href="/dashboard/">Dashboard</a>
+            <a href="/api/">API</a>
+        </nav>
+
+        <main>
+            <section class="hero">
+                <h2>Bienvenido al Sistema de Detección de Malware</h2>
+                <p>Este sistema utiliza técnicas de Machine Learning para detectar malware en aplicaciones Android mediante análisis de tráfico de red.</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>📊 Random Forest</h3>
+                        <p>Clasificador robusto con 50 árboles de decisión</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🎯 Alta Precisión</h3>
+                        <p>F1-Score > 0.93 en validación</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>⚡ Reducción de Características</h3>
+                        <p>De 79 a 10 características principales</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🔍 3 Categorías</h3>
+                        <p>Benigno, Adware y Malware General</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="dataset-info">
+                <h2>📦 Dataset CICAAGM</h2>
+                <p>El conjunto de datos utilizado proviene de 1900 aplicaciones Android reales:</p>
+                <ul>
+                    <li><strong>Adware (250 apps):</strong> Airpush, Dowgin, Kemoge, Mobidash, Shuanet</li>
+                    <li><strong>Malware General (150 apps):</strong> AVpass, FakeAV, FakeFlash, GGtracker, Penetho</li>
+                    <li><strong>Benigno (1500 apps):</strong> Aplicaciones legítimas de Google Play</li>
+                </ul>
+            </section>
+
+            <section class="api-info">
+                <h2>🔌 API Endpoints</h2>
+                <div class="endpoints">
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/api/predict/</code>
+                        <p>Realizar predicción de malware</p>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/api/feature-importances/</code>
+                        <p>Obtener importancia de características</p>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method get">GET</span>
+                        <code>/api/stats/</code>
+                        <p>Obtener estadísticas del modelo</p>
+                    </div>
+                    <div class="endpoint">
+                        <span class="method post">POST</span>
+                        <code>/api/train/</code>
+                        <p>Entrenar modelo (desarrollo)</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cta">
+                <h2>¿Listo para empezar?</h2>
+                <a href="/dashboard/" class="btn btn-primary">Ver Dashboard</a>
+                <a href="/api/" class="btn btn-secondary">Explorar API</a>
+            </section>
+        </main>
+
+        <footer>
+            <p>Sistema de Detección de Malware Android - Proyecto de Técnicas de Selección de Características</p>
+            <p>Basado en el dataset CICAAGM de la Universidad de New Brunswick</p>
+        </footer>
+    </div>
+</body>
+</html>

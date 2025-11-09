@@ -1,0 +1,26 @@
+[
+  {
+    "malware_type": "benign",
+    "confidence": 0.834280844195109,
+    "f1_score": null,
+    "created_at": "2025-11-09T22:06:36.991075+00:00"
+  },
+  {
+    "malware_type": "benign",
+    "confidence": 0.834280844195109,
+    "f1_score": null,
+    "created_at": "2025-11-09T22:06:29.223211+00:00"
+  },
+  {
+    "malware_type": "benign",
+    "confidence": 0.834280844195109,
+    "f1_score": null,
+    "created_at": "2025-11-09T22:04:24.674852+00:00"
+  },
+  {
+    "malware_type": "benign",
+    "confidence": 0.834280844195109,
+    "f1_score": null,
+    "created_at": "2025-11-09T22:04:15.757208+00:00"
+  }
+]

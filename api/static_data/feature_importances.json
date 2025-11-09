@@ -1,0 +1,397 @@
+[
+  {
+    "feature_name": "Init_Win_bytes_forward",
+    "importance_score": 0.14441690704311477,
+    "rank": 1
+  },
+  {
+    "feature_name": "max_flowiat",
+    "importance_score": 0.038199392256521955,
+    "rank": 2
+  },
+  {
+    "feature_name": "duration",
+    "importance_score": 0.03246497003484456,
+    "rank": 3
+  },
+  {
+    "feature_name": "flowBytesPerSecond",
+    "importance_score": 0.031431316597164145,
+    "rank": 4
+  },
+  {
+    "feature_name": "mean_flowiat",
+    "importance_score": 0.03131298022216401,
+    "rank": 5
+  },
+  {
+    "feature_name": "Init_Win_bytes_backward",
+    "importance_score": 0.031047778741313706,
+    "rank": 6
+  },
+  {
+    "feature_name": "flow_fin",
+    "importance_score": 0.030457382230878047,
+    "rank": 7
+  },
+  {
+    "feature_name": "flowPktsPerSecond",
+    "importance_score": 0.02855577825471026,
+    "rank": 8
+  },
+  {
+    "feature_name": "fPktsPerSecond",
+    "importance_score": 0.02475966628644831,
+    "rank": 9
+  },
+  {
+    "feature_name": "min_flowpktl",
+    "importance_score": 0.024142693509063857,
+    "rank": 10
+  },
+  {
+    "feature_name": "avgPacketSize",
+    "importance_score": 0.02393449586617508,
+    "rank": 11
+  },
+  {
+    "feature_name": "total_fpktl",
+    "importance_score": 0.0238259911096937,
+    "rank": 12
+  },
+  {
+    "feature_name": "mean_flowpktl",
+    "importance_score": 0.02239930870659779,
+    "rank": 13
+  },
+  {
+    "feature_name": "min_flowiat",
+    "importance_score": 0.021775412981373882,
+    "rank": 14
+  },
+  {
+    "feature_name": "fAvgSegmentSize",
+    "importance_score": 0.01988659004624423,
+    "rank": 15
+  },
+  {
+    "feature_name": "max_fpktl",
+    "importance_score": 0.018845660069618474,
+    "rank": 16
+  },
+  {
+    "feature_name": "max_flowpktl",
+    "importance_score": 0.01866176609189618,
+    "rank": 17
+  },
+  {
+    "feature_name": "total_fiat",
+    "importance_score": 0.01860638958584521,
+    "rank": 18
+  },
+  {
+    "feature_name": "mean_fpktl",
+    "importance_score": 0.01829415681142101,
+    "rank": 19
+  },
+  {
+    "feature_name": "min_seg_size_forward",
+    "importance_score": 0.01780997745418107,
+    "rank": 20
+  },
+  {
+    "feature_name": "mean_fiat",
+    "importance_score": 0.017366304586079736,
+    "rank": 21
+  },
+  {
+    "feature_name": "min_fpktl",
+    "importance_score": 0.016085401587332755,
+    "rank": 22
+  },
+  {
+    "feature_name": "bPktsPerSecond",
+    "importance_score": 0.01512109009667633,
+    "rank": 23
+  },
+  {
+    "feature_name": "max_fiat",
+    "importance_score": 0.014850169255914654,
+    "rank": 24
+  },
+  {
+    "feature_name": "std_flowpktl",
+    "importance_score": 0.014724871331834088,
+    "rank": 25
+  },
+  {
+    "feature_name": "mean_bpktl",
+    "importance_score": 0.01331029113222692,
+    "rank": 26
+  },
+  {
+    "feature_name": "min_idle",
+    "importance_score": 0.013023827058496178,
+    "rank": 27
+  },
+  {
+    "feature_name": "total_bpktl",
+    "importance_score": 0.012487158243455294,
+    "rank": 28
+  },
+  {
+    "feature_name": "sflow_fbytes",
+    "importance_score": 0.012281382203040935,
+    "rank": 29
+  },
+  {
+    "feature_name": "max_active",
+    "importance_score": 0.012262668332004236,
+    "rank": 30
+  },
+  {
+    "feature_name": "downUpRatio",
+    "importance_score": 0.011838009576028836,
+    "rank": 31
+  },
+  {
+    "feature_name": "bAvgSegmentSize",
+    "importance_score": 0.01182173209910947,
+    "rank": 32
+  },
+  {
+    "feature_name": "flow_psh",
+    "importance_score": 0.011612605958173466,
+    "rank": 33
+  },
+  {
+    "feature_name": "min_fiat",
+    "importance_score": 0.01067730704767486,
+    "rank": 34
+  },
+  {
+    "feature_name": "max_bpktl",
+    "importance_score": 0.01026074413071415,
+    "rank": 35
+  },
+  {
+    "feature_name": "max_idle",
+    "importance_score": 0.009794898753826324,
+    "rank": 36
+  },
+  {
+    "feature_name": "std_fpktl",
+    "importance_score": 0.009788480750561981,
+    "rank": 37
+  },
+  {
+    "feature_name": "fpsh_cnt",
+    "importance_score": 0.009547197296511873,
+    "rank": 38
+  },
+  {
+    "feature_name": "flow_ack",
+    "importance_score": 0.009277471277280756,
+    "rank": 39
+  },
+  {
+    "feature_name": "min_bpktl",
+    "importance_score": 0.008621594551656633,
+    "rank": 40
+  },
+  {
+    "feature_name": "std_flowiat",
+    "importance_score": 0.00858733915591625,
+    "rank": 41
+  },
+  {
+    "feature_name": "mean_active",
+    "importance_score": 0.008406876687855572,
+    "rank": 42
+  },
+  {
+    "feature_name": "min_active",
+    "importance_score": 0.007855824679715432,
+    "rank": 43
+  },
+  {
+    "feature_name": "mean_idle",
+    "importance_score": 0.007707658919233132,
+    "rank": 44
+  },
+  {
+    "feature_name": "bpsh_cnt",
+    "importance_score": 0.006366108079701441,
+    "rank": 45
+  },
+  {
+    "feature_name": "min_biat",
+    "importance_score": 0.005980954961208482,
+    "rank": 46
+  },
+  {
+    "feature_name": "bVarianceDataBytes",
+    "importance_score": 0.005180158316031871,
+    "rank": 47
+  },
+  {
+    "feature_name": "std_fiat",
+    "importance_score": 0.005141852297333314,
+    "rank": 48
+  },
+  {
+    "feature_name": "RRT_samples_clnt",
+    "importance_score": 0.004854149343842967,
+    "rank": 49
+  },
+  {
+    "feature_name": "std_bpktl",
+    "importance_score": 0.004833928772800377,
+    "rank": 50
+  },
+  {
+    "feature_name": "max_biat",
+    "importance_score": 0.004815639106481155,
+    "rank": 51
+  },
+  {
+    "feature_name": "total_biat",
+    "importance_score": 0.004796822759580097,
+    "rank": 52
+  },
+  {
+    "feature_name": "mean_biat",
+    "importance_score": 0.004411254294384231,
+    "rank": 53
+  },
+  {
+    "feature_name": "total_bhlen",
+    "importance_score": 0.003822519616582609,
+    "rank": 54
+  },
+  {
+    "feature_name": "Act_data_pkt_forward",
+    "importance_score": 0.0037002947952050357,
+    "rank": 55
+  },
+  {
+    "feature_name": "std_biat",
+    "importance_score": 0.0036544340197710574,
+    "rank": 56
+  },
+  {
+    "feature_name": "flow_syn",
+    "importance_score": 0.00363246324347466,
+    "rank": 57
+  },
+  {
+    "feature_name": "total_fhlen",
+    "importance_score": 0.003632095164649251,
+    "rank": 58
+  },
+  {
+    "feature_name": "bAvgBytesPerBulk",
+    "importance_score": 0.003313783768886201,
+    "rank": 59
+  },
+  {
+    "feature_name": "std_active",
+    "importance_score": 0.003276866366135812,
+    "rank": 60
+  },
+  {
+    "feature_name": "total_fpackets",
+    "importance_score": 0.00320679749172152,
+    "rank": 61
+  },
+  {
+    "feature_name": "sflow_fpacket",
+    "importance_score": 0.002967490346037712,
+    "rank": 62
+  },
+  {
+    "feature_name": "fHeaderBytes",
+    "importance_score": 0.0029643902452796745,
+    "rank": 63
+  },
+  {
+    "feature_name": "total_bpackets",
+    "importance_score": 0.00292357365305671,
+    "rank": 64
+  },
+  {
+    "feature_name": "sflow_bpacket",
+    "importance_score": 0.0028565217901229275,
+    "rank": 65
+  },
+  {
+    "feature_name": "flow_rst",
+    "importance_score": 0.0027984090713058397,
+    "rank": 66
+  },
+  {
+    "feature_name": "bAvgBulkRate",
+    "importance_score": 0.0024779425786268143,
+    "rank": 67
+  },
+  {
+    "feature_name": "sflow_bbytes",
+    "importance_score": 0.002377237373373595,
+    "rank": 68
+  },
+  {
+    "feature_name": "FFNEPD",
+    "importance_score": 0.0018971941721269525,
+    "rank": 69
+  },
+  {
+    "feature_name": "std_idle",
+    "importance_score": 0.0015497192082375138,
+    "rank": 70
+  },
+  {
+    "feature_name": "bAvgPacketsPerBulk",
+    "importance_score": 0.001435329176507161,
+    "rank": 71
+  },
+  {
+    "feature_name": "fAvgBytesPerBulk",
+    "importance_score": 0.0012460038357225717,
+    "rank": 72
+  },
+  {
+    "feature_name": "fAvgBulkRate",
+    "importance_score": 0.0009458699596277834,
+    "rank": 73
+  },
+  {
+    "feature_name": "fAvgPacketsPerBulk",
+    "importance_score": 0.0008006775815945327,
+    "rank": 74
+  },
+  {
+    "feature_name": "flow_ece",
+    "importance_score": 0.0,
+    "rank": 75
+  },
+  {
+    "feature_name": "furg_cnt",
+    "importance_score": 0.0,
+    "rank": 76
+  },
+  {
+    "feature_name": "flow_cwr",
+    "importance_score": 0.0,
+    "rank": 77
+  },
+  {
+    "feature_name": "burg_cnt",
+    "importance_score": 0.0,
+    "rank": 78
+  },
+  {
+    "feature_name": "flow_urg",
+    "importance_score": 0.0,
+    "rank": 79
+  }
+]

@@ -1,0 +1,66 @@
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment variables
+.env
+.env.local
+
+# Static files (collected)
+staticfiles/
+
+# ML models (archivos grandes)
+ml_model/*.pkl
+*.pkl
+
+# Data files (archivos CSV grandes)
+data/*.csv
+*.csv
+TotalFeatures-ISCXFlowMeter.csv
+
+# Mantener solo los datos estáticos JSON
+!api/static_data/*.json

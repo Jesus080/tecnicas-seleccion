@@ -1,0 +1,20 @@
+[
+  {
+    "model_type": "random_forest_classification",
+    "metric_name": "F1_Score",
+    "metric_value": 0.9291513513515317,
+    "with_scaler": false
+  },
+  {
+    "model_type": "random_forest_classification",
+    "metric_name": "Precision",
+    "metric_value": 0.9292278465602108,
+    "with_scaler": false
+  },
+  {
+    "model_type": "random_forest_classification",
+    "metric_name": "Recall",
+    "metric_value": 0.9305488523708175,
+    "with_scaler": false
+  }
+]
