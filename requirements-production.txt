@@ -1,3 +1,6 @@
+# Dependencias mínimas para producción (sin ML)
+# Solo visualización estática de datos
+
 # Framework
 Django==4.2.7
 djangorestframework==3.14.0

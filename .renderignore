@@ -1,0 +1,11 @@
+# Archivos que Render no necesita
+*.csv
+*.pkl
+data/
+ml_model/*.pkl
+venv/
+__pycache__/
+*.pyc
+.git/
+.env
+*.sqlite3
